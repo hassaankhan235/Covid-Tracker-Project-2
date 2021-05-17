@@ -3,7 +3,6 @@ import {QueryClient, QueryClientProvider} from 'react-query'
 import './App.css';
 
 // import Styles from './App.module.css'
-import { Chart } from './components'
 import {Data, FetchdailyData} from './components/dataApi/index'
 import backgroundImage from './65381887.jpg'
 
