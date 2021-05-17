@@ -17,7 +17,8 @@ function App() {
       backgroundImage: `url(${backgroundImage})`
     }}>
     </div>
-    <div>
+    <div className='datascreen'>
+    <h5 className='text-pink-500 text-5xl m-5 underline'> CORONAVIRS SUMMARY </h5>
     <QueryClientProvider client={queryClient}>
       <Data />
     </QueryClientProvider>  

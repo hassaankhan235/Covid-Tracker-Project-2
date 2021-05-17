@@ -6,6 +6,13 @@
 .bgImg{
   height: 20%;
 }
+.datascreen{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
 
 
 

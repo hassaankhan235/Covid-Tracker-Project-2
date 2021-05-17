@@ -1,5 +1,5 @@
 import React from 'react'
-import Line from 'react-charjs2'
+import {Line, Bar} from 'react-chartjs-2'
 
 const Chart = ({data}) => {
 
@@ -14,12 +14,14 @@ const Chart = ({data}) => {
     },{
       data: data.map(({deaths}) => deaths),
       label: 'Deaths',
+      fill: true,
+      backgroundColor: "rgba(75,192,192,0.2)",
       borderColor: 'red',
-      backgroundColor: 'rgba(255, 0, 0, 0.5)'
     }]
   }} />
   return (
-    <div className="text-white">
+    <div 
+    className="mx-1 w-3/5">
       {lineChart}
     </div>
   )
