@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import {QueryClient, QueryClientProvider} from 'react-query'
 import './App.css';
 
+// import Styles from './App.module.css'
+import { Chart } from './components'
+import {Data, FetchdailyData} from './components/dataApi/index'
+import backgroundImage from './65381887.jpg'
+
+const queryClient = new QueryClient()
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return(
+    <div className="App" style={{overflow:'scroll'}}>
+    <div className='bg-fixed bgImg' style={{
+      backgroundImage: `url(${backgroundImage})`
+    }}>
     </div>
-  );
+    <div>
+    <QueryClientProvider client={queryClient}>
+      <Data />
+    </QueryClientProvider>  
+    <QueryClientProvider client={queryClient}>
+      <FetchdailyData />
+    </QueryClientProvider>
+    </div>
+    </div>)
 }
 
 export default App;
